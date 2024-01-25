@@ -1,7 +1,716 @@
-<!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
-</body>
-</html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>홍상기 포트폴리오 </title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 3px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.column-list {
+	display: flex;
+	justify-content: space-between;
+}
+
+.column {
+	padding: 0 1em;
+}
+
+.column:first-child {
+	padding-left: 0;
+}
+
+.column:last-child {
+	padding-right: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+	border-collapse: collapse;
+}
+
+table {
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+    margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-block;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1.25em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, "Apple Color Emoji", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(55, 53, 47, 1);
+}
+.highlight-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.highlight-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.highlight-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.highlight-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.highlight-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.highlight-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.highlight-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.highlight-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.highlight-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.highlight-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.highlight-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.highlight-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.highlight-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.highlight-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.highlight-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(120, 119, 116, 1);
+	fill: rgba(120, 119, 116, 1);
+}
+.block-color-brown {
+	color: rgba(159, 107, 83, 1);
+	fill: rgba(159, 107, 83, 1);
+}
+.block-color-orange {
+	color: rgba(217, 115, 13, 1);
+	fill: rgba(217, 115, 13, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 145, 47, 1);
+	fill: rgba(203, 145, 47, 1);
+}
+.block-color-teal {
+	color: rgba(68, 131, 97, 1);
+	fill: rgba(68, 131, 97, 1);
+}
+.block-color-blue {
+	color: rgba(51, 126, 169, 1);
+	fill: rgba(51, 126, 169, 1);
+}
+.block-color-purple {
+	color: rgba(144, 101, 176, 1);
+	fill: rgba(144, 101, 176, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(212, 76, 71, 1);
+	fill: rgba(212, 76, 71, 1);
+}
+.block-color-gray_background {
+	background: rgba(241, 241, 239, 1);
+}
+.block-color-brown_background {
+	background: rgba(244, 238, 238, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 236, 221, 1);
+}
+.block-color-yellow_background {
+	background: rgba(251, 243, 219, 1);
+}
+.block-color-teal_background {
+	background: rgba(237, 243, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(231, 243, 248, 1);
+}
+.block-color-purple_background {
+	background: rgba(244, 240, 247, 0.8);
+}
+.block-color-pink_background {
+	background: rgba(249, 238, 243, 0.8);
+}
+.block-color-red_background {
+	background: rgba(253, 235, 236, 1);
+}
+.select-value-color-uiBlue { background-color: rgba(35, 131, 226, .07); }
+.select-value-color-pink { background-color: rgba(245, 224, 233, 1); }
+.select-value-color-purple { background-color: rgba(232, 222, 238, 1); }
+.select-value-color-green { background-color: rgba(219, 237, 219, 1); }
+.select-value-color-gray { background-color: rgba(227, 226, 224, 1); }
+.select-value-color-translucentGray { background-color: rgba(255, 255, 255, 0.0375); }
+.select-value-color-orange { background-color: rgba(250, 222, 201, 1); }
+.select-value-color-brown { background-color: rgba(238, 224, 218, 1); }
+.select-value-color-red { background-color: rgba(255, 226, 221, 1); }
+.select-value-color-yellow { background-color: rgba(253, 236, 200, 1); }
+.select-value-color-blue { background-color: rgba(211, 229, 239, 1); }
+.select-value-color-pageGlass { background-color: undefined; }
+.select-value-color-washGlass { background-color: undefined; }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="4c607feb-548c-4d1f-8670-ad1c6f046ec7" class="page sans"><header><img class="page-cover-image" src="%E1%84%92%E1%85%A9%E1%86%BC%E1%84%89%E1%85%A1%E1%86%BC%E1%84%80%E1%85%B5%20%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%204c607feb548c4d1f8670ad1c6f046ec7/Notion_Portfolio_Cover_Image.jpg" style="object-position:center 50%"/><h1 class="page-title">홍상기 포트폴리오 </h1><p class="page-description"></p></header><div class="page-body"><hr id="130688d2-3db8-4875-b04d-dc5d0b20113d"/><div id="3b04f9db-8921-4c2d-931f-0900c95becdf" class="column-list"><div id="675c527d-e478-4243-a2c3-10640cc77bce" style="width:43.75%" class="column"><figure id="ba86c3fe-baf9-4ba9-8987-702f9a97bb4b" class="image" style="text-align:left"><a href="%E1%84%92%E1%85%A9%E1%86%BC%E1%84%89%E1%85%A1%E1%86%BC%E1%84%80%E1%85%B5%20%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%204c607feb548c4d1f8670ad1c6f046ec7/Notion_Portfolio_-_Profile.jpg"><img style="width:400px" src="%E1%84%92%E1%85%A9%E1%86%BC%E1%84%89%E1%85%A1%E1%86%BC%E1%84%80%E1%85%B5%20%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%204c607feb548c4d1f8670ad1c6f046ec7/Notion_Portfolio_-_Profile.jpg"/></a></figure><h3 id="80b7e6c3-f2e5-43a7-b895-57e2ebf9eda5" class="block-color-blue"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#002200"><mrow><mi>S</mi><mi>a</mi><mi>n</mi><mi>g</mi><mi>k</mi><mi>i</mi></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{002200}{Sangki}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord" style="color:#002200;"><span class="mord mathnormal" style="margin-right:0.05764em;color:#002200;">S</span><span class="mord mathnormal" style="color:#002200;">an</span><span class="mord mathnormal" style="margin-right:0.03588em;color:#002200;">g</span><span class="mord mathnormal" style="color:#002200;">ki</span></span></span></span></span></span><span>﻿</span></span> <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#002200"><mrow><mi>H</mi><mi>o</mi><mi>n</mi><mi>g</mi></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{002200}{Hong }</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord" style="color:#002200;"><span class="mord mathnormal" style="color:#002200;">Ho</span><span class="mord mathnormal" style="color:#002200;">n</span><span class="mord mathnormal" style="margin-right:0.03588em;color:#002200;">g</span></span></span></span></span></span><span>﻿</span></span></h3><blockquote id="196acf42-2f10-4cdb-845d-9796f0263b71" class="block-color-default">Bucheon-si, South Korea<br/>Tel. 010-2123-3602<br/>E. sanggigom@gmail.com<br/></blockquote><p id="28695667-5934-4098-8479-14d1584a8f45" class="">
+</p><hr id="b72aefe4-3652-49bc-8093-92050c7436db"/><p id="134a5214-5104-42e1-aec1-51460147fb1f" class="block-color-blue">
+</p><h3 id="3da01a40-e145-4d71-bd89-e22c1a214aba" class="block-color-blue"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#009900"><mrow><mi>N</mi><mi>a</mi><mi>v</mi><mi>i</mi><mi>g</mi><mi>a</mi><mi>t</mi><mi>o</mi><mi>r</mi></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{009900}{Navigator }</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord" style="color:#009900;"><span class="mord mathnormal" style="margin-right:0.10903em;color:#009900;">N</span><span class="mord mathnormal" style="color:#009900;">a</span><span class="mord mathnormal" style="margin-right:0.03588em;color:#009900;">v</span><span class="mord mathnormal" style="color:#009900;">i</span><span class="mord mathnormal" style="margin-right:0.03588em;color:#009900;">g</span><span class="mord mathnormal" style="color:#009900;">a</span><span class="mord mathnormal" style="color:#009900;">t</span><span class="mord mathnormal" style="margin-right:0.02778em;color:#009900;">or</span></span></span></span></span></span><span>﻿</span></span></h3><p id="4d475062-3b73-49d5-b26f-96be695b6d5a" class="">①   <a href="%E1%84%92%E1%85%A9%E1%86%BC%E1%84%89%E1%85%A1%E1%86%BC%E1%84%80%E1%85%B5%20%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%204c607feb548c4d1f8670ad1c6f046ec7.html">Experience</a> </p><p id="a8a8ebd0-6fe6-487b-ae80-4bc4a50fa6d8" class="">②   <a href="%E1%84%92%E1%85%A9%E1%86%BC%E1%84%89%E1%85%A1%E1%86%BC%E1%84%80%E1%85%B5%20%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%204c607feb548c4d1f8670ad1c6f046ec7.html">Projects</a> </p><p id="3c3dbd84-23a2-4820-be5f-05cd4cdbff78" class="">③   <a href="%E1%84%92%E1%85%A9%E1%86%BC%E1%84%89%E1%85%A1%E1%86%BC%E1%84%80%E1%85%B5%20%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%204c607feb548c4d1f8670ad1c6f046ec7.html">Skills</a> </p><p id="3fbc9101-18a3-4b7e-a371-61b255c733c8" class="">④   <a href="%E1%84%92%E1%85%A9%E1%86%BC%E1%84%89%E1%85%A1%E1%86%BC%E1%84%80%E1%85%B5%20%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%204c607feb548c4d1f8670ad1c6f046ec7.html">Social Media</a> </p><p id="14182940-7be2-45ab-b4c4-483991861b9e" class="">⑤   <a href="%E1%84%92%E1%85%A9%E1%86%BC%E1%84%89%E1%85%A1%E1%86%BC%E1%84%80%E1%85%B5%20%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%204c607feb548c4d1f8670ad1c6f046ec7.html">Others</a>  </p><p id="cdd1872e-15cc-4481-8327-cee687d94e39" class="">
+</p></div><div id="807bfbb2-6758-4d74-8e3e-260e5bf4a613" style="width:81.25%" class="column"><h3 id="3d168172-45ad-4fe0-8da3-dda9d9204ab7" class="block-color-blue"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#009900"><mrow><mi>A</mi><mi>b</mi><mi>o</mi><mi>u</mi><mi>t</mi></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{009900}{About}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord" style="color:#009900;"><span class="mord mathnormal" style="color:#009900;">A</span><span class="mord mathnormal" style="color:#009900;">b</span><span class="mord mathnormal" style="color:#009900;">o</span><span class="mord mathnormal" style="color:#009900;">u</span><span class="mord mathnormal" style="color:#009900;">t</span></span></span></span></span></span><span>﻿</span></span> <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#009900"><mrow><mi>M</mi><mi>e</mi></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{009900}{Me}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord" style="color:#009900;"><span class="mord mathnormal" style="margin-right:0.10903em;color:#009900;">M</span><span class="mord mathnormal" style="color:#009900;">e</span></span></span></span></span></span><span>﻿</span></span> </h3><p id="e7c2fbc6-db04-4e15-8626-37f2920ce8c5" class=""> 개발이 좋아서 시간가는 줄 모르고 개발하는 프로그래머입니다. 문제에 직면하면 해결할 때까지 붙들고 포기하지 않는 끈기있는 개발자 입니다.</p><p id="62bb8d11-f609-4657-8d23-7d7aeab82f1f" class="">
+</p><h3 id="f777b2ce-150c-4f83-8622-94e2c530951a" class="block-color-blue"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#009900"><mrow><mi>E</mi><mi>x</mi><mi>p</mi><mi>e</mi><mi>r</mi><mi>i</mi><mi>e</mi><mi>n</mi><mi>c</mi><mi>e</mi></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{009900}{Experience}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord" style="color:#009900;"><span class="mord mathnormal" style="margin-right:0.05764em;color:#009900;">E</span><span class="mord mathnormal" style="color:#009900;">x</span><span class="mord mathnormal" style="color:#009900;">p</span><span class="mord mathnormal" style="margin-right:0.02778em;color:#009900;">er</span><span class="mord mathnormal" style="color:#009900;">i</span><span class="mord mathnormal" style="color:#009900;">e</span><span class="mord mathnormal" style="color:#009900;">n</span><span class="mord mathnormal" style="color:#009900;">ce</span></span></span></span></span></span><span>﻿</span></span> <style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#009900"><mrow><mi>O</mi><mi>v</mi><mi>e</mi><mi>r</mi><mi>v</mi><mi>i</mi><mi>e</mi><mi>w</mi></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{009900}{Overview}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord" style="color:#009900;"><span class="mord mathnormal" style="margin-right:0.02778em;color:#009900;">O</span><span class="mord mathnormal" style="margin-right:0.03588em;color:#009900;">v</span><span class="mord mathnormal" style="margin-right:0.02778em;color:#009900;">er</span><span class="mord mathnormal" style="margin-right:0.03588em;color:#009900;">v</span><span class="mord mathnormal" style="color:#009900;">i</span><span class="mord mathnormal" style="color:#009900;">e</span><span class="mord mathnormal" style="margin-right:0.02691em;color:#009900;">w</span></span></span></span></span></span><span>﻿</span></span></h3><p id="fbd68eef-8e73-4085-b014-4d75c77ed478" class=""> 총 경력 2년 9개월</p><ul id="8b7732c6-6214-4bd2-b27d-a9875ac791bb" class="bulleted-list"><li style="list-style-type:disc">Acts29Games              <mark class="highlight-gray">2022.08 - 재직중</mark></li></ul><ul id="3cdb5c08-7d51-4130-87ce-0cee2239dc28" class="bulleted-list"><li style="list-style-type:disc">Solo Developer           <mark class="highlight-gray">2018.12 - 2020.03</mark></li></ul><p id="c4eb4509-3bce-49e8-b1a2-ef5ca62775bd" class="">
+</p><h3 id="1aeeaffa-6e90-40d9-92a3-52861b1d8dc5" class="block-color-blue"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#009900"><mrow><mi>E</mi><mi>d</mi><mi>u</mi><mi>c</mi><mi>a</mi><mi>t</mi><mi>i</mi><mi>o</mi><mi>n</mi></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{009900}{Education }</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord" style="color:#009900;"><span class="mord mathnormal" style="margin-right:0.05764em;color:#009900;">E</span><span class="mord mathnormal" style="color:#009900;">d</span><span class="mord mathnormal" style="color:#009900;">u</span><span class="mord mathnormal" style="color:#009900;">c</span><span class="mord mathnormal" style="color:#009900;">a</span><span class="mord mathnormal" style="color:#009900;">t</span><span class="mord mathnormal" style="color:#009900;">i</span><span class="mord mathnormal" style="color:#009900;">o</span><span class="mord mathnormal" style="color:#009900;">n</span></span></span></span></span></span><span>﻿</span></span></h3><ul id="51e95f8c-d05a-484e-8039-68752ddcc682" class="block-color-default bulleted-list"><li style="list-style-type:disc">아텐츠게임아카데미<mark class="highlight-gray">   2022.01 - 2022.07</mark></li></ul><ul id="318b407f-7cff-4ad1-ac36-b03eefbc2753" class="block-color-default bulleted-list"><li style="list-style-type:disc">칼빈대학교 신학부  <mark class="highlight-gray">   2007.03 - 2014.02</mark></li></ul><ul id="4542349c-a28c-4fd2-bd86-1ea9e0eede20" class="bulleted-list"><li style="list-style-type:disc">울산제일고등학교   <mark class="highlight-gray">   2004.03 - 2007.02</mark></li></ul><p id="24caa345-ebfe-47df-889f-3a97a574b7e2" class="">
+</p><h3 id="506cca0f-1d48-4c77-9525-205407fbb005" class="block-color-blue"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#009900"><mrow><mi>C</mi><mi>o</mi><mi>n</mi><mi>t</mi><mi>a</mi><mi>c</mi><mi>t</mi></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{009900}{Contact}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord" style="color:#009900;"><span class="mord mathnormal" style="margin-right:0.07153em;color:#009900;">C</span><span class="mord mathnormal" style="color:#009900;">o</span><span class="mord mathnormal" style="color:#009900;">n</span><span class="mord mathnormal" style="color:#009900;">t</span><span class="mord mathnormal" style="color:#009900;">a</span><span class="mord mathnormal" style="color:#009900;">c</span><span class="mord mathnormal" style="color:#009900;">t</span></span></span></span></span></span><span>﻿</span></span></h3><ul id="683bea21-3339-416a-bc39-8f9a0b56e6d4" class="block-color-default bulleted-list"><li style="list-style-type:disc"><mark class="highlight-default">깃허브 : </mark><mark class="highlight-blue"><a href="https://github.com/SangkiHong">🚀Github</a></mark></li></ul><ul id="491d0075-af90-4acf-8977-1cc17748b80d" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-default">블로그 : </mark><mark class="highlight-blue"><a href="https://developer-caleb.tistory.com/">✒Tistory</a></mark></li></ul><ul id="76187d85-4f31-4da1-bd37-bd01221c6473" class="bulleted-list"><li style="list-style-type:disc"><mark class="highlight-default">유튜브 : </mark><mark class="highlight-blue"><a href="https://youtu.be/RTpPyCCJJXY">📺youtube.com/CalebHong</a></mark></li></ul></div></div><h1 id="0ca784ef-9109-401b-a790-1a61fbe8a843" class="block-color-blue"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#009900"><mrow><mi>E</mi><mi>x</mi><mi>p</mi><mi>e</mi><mi>r</mi><mi>i</mi><mi>e</mi><mi>n</mi><mi>c</mi><mi>e</mi></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{009900}{Experience}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord" style="color:#009900;"><span class="mord mathnormal" style="margin-right:0.05764em;color:#009900;">E</span><span class="mord mathnormal" style="color:#009900;">x</span><span class="mord mathnormal" style="color:#009900;">p</span><span class="mord mathnormal" style="margin-right:0.02778em;color:#009900;">er</span><span class="mord mathnormal" style="color:#009900;">i</span><span class="mord mathnormal" style="color:#009900;">e</span><span class="mord mathnormal" style="color:#009900;">n</span><span class="mord mathnormal" style="color:#009900;">ce</span></span></span></span></span></span><span>﻿</span></span></h1><hr id="a855bfb4-13b7-4b5b-95f5-0ac3b75d13b7"/><div id="6635512d-e10d-479f-9600-a0a7465e507f" class="column-list"><div id="cf3d4026-dd09-4140-8aca-aa9ba600df1d" style="width:87.5%" class="column"><p id="d0621617-59fe-4682-a9d7-d1619111d0f9" class="">
+</p><figure id="92ea0178-df22-460f-a458-04f21683d8ee" class="image"><a href="%E1%84%92%E1%85%A9%E1%86%BC%E1%84%89%E1%85%A1%E1%86%BC%E1%84%80%E1%85%B5%20%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%204c607feb548c4d1f8670ad1c6f046ec7/%25EC%2588%2598%25EC%25A0%2595%25EB%2590%25A8_Acts29GAMES_512_white-5.jpg"><img style="width:240px" src="%E1%84%92%E1%85%A9%E1%86%BC%E1%84%89%E1%85%A1%E1%86%BC%E1%84%80%E1%85%B5%20%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%204c607feb548c4d1f8670ad1c6f046ec7/%25EC%2588%2598%25EC%25A0%2595%25EB%2590%25A8_Acts29GAMES_512_white-5.jpg"/></a></figure><p id="43a12010-a96c-41cd-b0a5-4f05743a5874" class="">
+</p><p id="bbca9e0d-e91b-42b6-bb02-c5efac40ffb1" class="">
+</p><p id="5b7c3885-c4fe-455f-b58d-e1b99dc08390" class="">
+</p><p id="c57ecf1a-9e48-4396-bb88-c07913e6de6b" class="">
+</p><p id="28707680-45fa-4307-9527-8583a9612703" class="">
+</p><figure id="ada44942-569c-4b1f-97b9-88576431673e" class="image"><a href="https://atentsgame.com/resources/images/landing/header/logo_atents.svg"><img style="width:288px" src="https://atentsgame.com/resources/images/landing/header/logo_atents.svg"/></a></figure><p id="b10cc0a1-63c1-430e-8640-f8644e8d7759" class="">
+</p><p id="a4db68fc-84e7-4b19-b8f5-57cccb1acdc9" class="">
+</p><p id="a219fc4c-59ba-4be9-bc88-8c7a08ea778d" class="">
+</p><figure id="85963e28-c6db-47f7-b60d-96d3b5825cbb" class="image"><a href="%E1%84%92%E1%85%A9%E1%86%BC%E1%84%89%E1%85%A1%E1%86%BC%E1%84%80%E1%85%B5%20%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%204c607feb548c4d1f8670ad1c6f046ec7/%25EA%25B0%259C%25EC%259D%25B8_%25ED%2594%2584%25EB%25A1%259C%25EC%25A0%259D%25ED%258A%25B8_%25EC%258A%25A4%25ED%2581%25AC%25EB%25A6%25B0%25EC%2583%25B7_%25EB%25AA%25A8%25EC%259D%258C.jpg"><img style="width:1080px" src="%E1%84%92%E1%85%A9%E1%86%BC%E1%84%89%E1%85%A1%E1%86%BC%E1%84%80%E1%85%B5%20%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%204c607feb548c4d1f8670ad1c6f046ec7/%25EA%25B0%259C%25EC%259D%25B8_%25ED%2594%2584%25EB%25A1%259C%25EC%25A0%259D%25ED%258A%25B8_%25EC%258A%25A4%25ED%2581%25AC%25EB%25A6%25B0%25EC%2583%25B7_%25EB%25AA%25A8%25EC%259D%258C.jpg"/></a></figure></div><div id="ce7f2a8e-c6d8-4d52-a4c1-5c495576530d" style="width:45.83333333333333%" class="column"><h3 id="852be100-dc1b-4c8e-aae3-3f461c0848a8" class="block-color-gray">2022.8<br/>      - 재직중<br/></h3><hr id="c31bc15e-6f9e-4dc9-be20-d493596d41f3"/><p id="9bf6ed9c-eb9b-4407-aa3a-60be732c5104" class="">
+</p><p id="2863e279-0ae6-4140-b1b1-d568eb8fc5f0" class="">
+</p><p id="433f3d4c-b1d1-464c-8d57-094376d4ef47" class="">
+</p><p id="76e2fa4b-0448-47ee-9c91-c411ae5fd7bf" class="">
+</p><p id="e646dea2-216e-4991-80e2-cfc74091d1b2" class="">
+</p><p id="cd01bf7e-1404-49fd-8eb5-d45af2a11738" class="">
+</p><h3 id="73cdfaef-0858-4058-9dfa-67ba808b4cc4" class="block-color-gray">2022.1<br/>     - 2022.7<br/></h3><hr id="b8309eb9-6874-44e0-b2fb-a3a9d5f31b05"/><p id="01ecef7c-c3d1-4c1e-b95c-516e717376aa" class="">
+</p><p id="49994293-7631-4222-bdf4-dc6bf5a7ab05" class="">
+</p><p id="1dd9d2de-a9c5-4223-9efc-d7b5be44fb5e" class="">
+</p><h3 id="be0181df-5f39-44b5-bb8a-8907827bd313" class="block-color-gray">2018.12<br/>     - 2020.2<br/></h3><hr id="600b8bad-8d7a-474c-b92e-e8dde77e8d44"/><p id="65907670-7e16-4f80-bdda-973e15ea3e49" class="">
+</p></div><div id="b803e63e-57d1-4a3e-9554-407641310984" style="width:108.3333333333333%" class="column"><h2 id="7b1dc333-1cfa-4e88-bdce-c2082adf5cd8" class=""><mark class="highlight-purple">Acts29Games(VRMedia)</mark><br/>Game Programmer<br/></h2><hr id="d3888fb4-f18f-4d7c-9d57-f21260399810"/><ul id="b3194dab-4a56-4f98-bf39-51f5e500995a" class="toggle"><li><details open=""><summary>PC 게임(어드벤쳐 플랫포머) </summary></details></li></ul><p id="a8a6e20c-72d0-4bbe-9281-70a139e25035" class="">      Main Programmer로 개발 참여</p><ul id="fe89115e-6b5d-4400-a131-6f844e320889" class="toggle"><li><details open=""><summary>PC 플랫폼(Steam)으로 출시</summary></details></li></ul><ul id="be1a3757-e84f-42a2-a251-03c078c4a074" class="toggle"><li><details open=""><summary><mark class="highlight-default">스테이지 레벨디자인 및 게임 퍼즐 기획 참여</mark></summary></details></li></ul><h2 id="eebfe2e4-f453-4aac-87f4-08ebcd62cb8c" class=""><mark class="highlight-purple">Atents Game Academy</mark></h2><hr id="48e2f645-2547-413d-8985-2412d94f2dde"/><ul id="a8a13987-debf-4493-aa3a-2a843d57d80d" class="toggle"><li><details open=""><summary>게임엔진 및 네트워크 전문가 양성 과정</summary></details></li></ul><ul id="62f7ee56-4899-466a-bebf-33a5393883b7" class="toggle"><li><details open=""><summary>C, C++, 자료구조 및 알고리즘 교육 이수</summary></details></li></ul><ul id="b1b50aab-ba79-4ed4-96a1-f373f31a5864" class="toggle"><li><details open=""><summary>유니티 엔진 및 게임 콘텐츠 제작 교육 이수</summary></details></li></ul><p id="248bec7b-e69c-4446-b308-f5863a606c1a" class="">
+</p><h2 id="9f6858e2-8a97-4f95-a919-475a92e9bc55" class=""><mark class="highlight-purple">Indie Game Solo Developer</mark></h2><hr id="5fbd8395-63e8-41d0-ad81-6f5aba5fda92"/><ul id="66273696-da5f-4a36-a994-55f59308dc89" class="toggle"><li><details open=""><summary>게임엔진(유니티)과 프로그래밍 언어(C#)를 학습 시작</summary></details></li></ul><ul id="8aca9bfd-ee01-4f03-a77d-9fd51d6078fb" class="toggle"><li><details open=""><summary>모바일 게임(안드로이드) 4개 출시</summary></details></li></ul><p id="5c65fcdf-bec2-443d-9049-e6b0bfe28576" class="">
+</p></div></div><p id="b26dd402-ed39-404a-bc1b-6242dcca02e9" class="">
+</p><h1 id="4ce4fea5-d2e7-4574-a4c3-d9813e94c4ed" class="block-color-blue"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#009900"><mrow><mi>P</mi><mi>r</mi><mi>o</mi><mi>j</mi><mi>e</mi><mi>c</mi><mi>t</mi><mi>s</mi></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{009900}{Projects}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8778em;vertical-align:-0.1944em;"></span><span class="mord" style="color:#009900;"><span class="mord mathnormal" style="margin-right:0.13889em;color:#009900;">P</span><span class="mord mathnormal" style="color:#009900;">ro</span><span class="mord mathnormal" style="margin-right:0.05724em;color:#009900;">j</span><span class="mord mathnormal" style="color:#009900;">ec</span><span class="mord mathnormal" style="color:#009900;">t</span><span class="mord mathnormal" style="color:#009900;">s</span></span></span></span></span></span><span>﻿</span></span></h1><hr id="fedd4fac-58d9-4596-8ab6-76a3cf169694"/><p id="f1d2eefd-6a0c-4b7c-ba02-61240b49bab4" class=""><mark class="highlight-gray">담당한 프로젝트를 최신 순으로 구성했습니다.</mark></p><p id="6fc6a8fd-89ae-45b9-a7a8-ed57a5a1c4d4" class=""><mark class="highlight-gray">주요 내용, 역할&amp;기여도, 기간 등을 확인할 수 있습니다.</mark></p><div id="1da4b933-4650-4756-9c85-f13f7963e4e7" class="collection-content"><h4 class="collection-title">프로젝트 </h4><table class="collection-content"><thead><tr><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesTitle"><path d="M0.637695 13.1914C1.0957 13.1914 1.32812 13 1.47852 12.5215L2.24414 10.3887H6.14746L6.90625 12.5215C7.05664 13 7.2959 13.1914 7.74707 13.1914C8.22559 13.1914 8.5332 12.9043 8.5332 12.4531C8.5332 12.2891 8.50586 12.1523 8.44434 11.9678L5.41602 3.79199C5.2041 3.21777 4.82129 2.9375 4.19922 2.9375C3.60449 2.9375 3.21484 3.21777 3.0166 3.78516L-0.0322266 12.002C-0.09375 12.1797 -0.121094 12.3232 -0.121094 12.4668C-0.121094 12.918 0.166016 13.1914 0.637695 13.1914ZM2.63379 9.12402L4.17871 4.68066H4.21973L5.76465 9.12402H2.63379ZM12.2793 13.2324C13.3115 13.2324 14.2891 12.6787 14.7129 11.8037H14.7402V12.5762C14.7471 12.9863 15.0273 13.2393 15.4238 13.2393C15.834 13.2393 16.1143 12.9795 16.1143 12.5215V8.00977C16.1143 6.49902 14.9658 5.52148 13.1543 5.52148C11.7666 5.52148 10.6592 6.08887 10.2695 6.99121C10.1943 7.15527 10.1533 7.3125 10.1533 7.46289C10.1533 7.81152 10.4062 8.04395 10.7686 8.04395C11.0215 8.04395 11.2129 7.94824 11.3496 7.73633C11.7529 6.99121 12.2861 6.65625 13.1064 6.65625C14.0977 6.65625 14.6992 7.20996 14.6992 8.1123V8.67285L12.5664 8.7959C10.7686 8.8916 9.77734 9.69824 9.77734 11.0107C9.77734 12.3369 10.8096 13.2324 12.2793 13.2324ZM12.6621 12.1387C11.8008 12.1387 11.2129 11.667 11.2129 10.9561C11.2129 10.2725 11.7598 9.82129 12.7578 9.75977L14.6992 9.62988V10.3203C14.6992 11.3457 13.7969 12.1387 12.6621 12.1387Z"></path></svg></span>Name</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesUrl"><path d="M7.69922 10.8945L8.73828 9.84863C7.91797 9.77344 7.34375 9.51367 6.91992 9.08984C5.76465 7.93457 5.76465 6.29395 6.91309 5.14551L9.18262 2.87598C10.3379 1.7207 11.9717 1.7207 13.127 2.87598C14.2891 4.04492 14.2822 5.67188 13.1338 6.82031L11.958 7.99609C12.1768 8.49512 12.2451 9.10352 12.1289 9.62988L14.0908 7.6748C15.7725 6 15.7793 3.62109 14.084 1.92578C12.3887 0.223633 10.0098 0.237305 8.33496 1.91211L5.95605 4.29785C4.28125 5.97266 4.26758 8.35156 5.96289 10.0469C6.36621 10.4434 6.90625 10.7441 7.69922 10.8945ZM8.30078 5.13184L7.26855 6.17773C8.08203 6.25293 8.66309 6.51953 9.08008 6.93652C10.2422 8.09863 10.2422 9.73242 9.08691 10.8809L6.81738 13.1504C5.66211 14.3057 4.03516 14.3057 2.87305 13.1504C1.71094 11.9883 1.71777 10.3545 2.87305 9.20605L4.04199 8.03027C3.83008 7.53125 3.75488 6.92969 3.87109 6.39648L1.91602 8.35156C0.234375 10.0264 0.227539 12.4121 1.92285 14.1074C3.61816 15.8027 5.99707 15.7891 7.67188 14.1143L10.0439 11.7354C11.7256 10.0537 11.7324 7.6748 10.0371 5.98633C9.64062 5.58301 9.10059 5.28223 8.30078 5.13184Z"></path></svg></span>URL</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesNumber"><path d="M2.4834 10.9902H4.33594L3.75488 13.8887C3.74121 13.9639 3.72754 14.0664 3.72754 14.1416C3.72754 14.5381 3.99414 14.7637 4.39746 14.7637C4.81445 14.7637 5.09473 14.5449 5.18359 14.1143L5.80566 10.9902H8.79297L8.21191 13.8887C8.19824 13.9639 8.18457 14.0664 8.18457 14.1416C8.18457 14.5381 8.45117 14.7637 8.85449 14.7637C9.27148 14.7637 9.55176 14.5449 9.63379 14.1143L10.2627 10.9902H12.4502C12.9287 10.9902 13.2432 10.6758 13.2432 10.2109C13.2432 9.8418 12.9902 9.56836 12.6006 9.56836H10.5498L11.2129 6.28711H13.3662C13.8379 6.28711 14.1523 5.96582 14.1523 5.50098C14.1523 5.13184 13.9062 4.8584 13.5098 4.8584H11.5L12.0195 2.27441C12.0264 2.21973 12.0469 2.11035 12.0469 2.01465C12.0469 1.625 11.7666 1.39258 11.3633 1.39258C10.9053 1.39258 10.6797 1.63867 10.5977 2.05566L10.0303 4.8584H7.04297L7.5625 2.27441C7.57617 2.21973 7.58984 2.11035 7.58984 2.01465C7.58984 1.625 7.30957 1.39258 6.91309 1.39258C6.44824 1.39258 6.21582 1.63867 6.13379 2.05566L5.57324 4.8584H3.54297C3.06445 4.8584 2.75 5.18652 2.75 5.65137C2.75 6.03418 3.00293 6.28711 3.39258 6.28711H5.28613L4.62305 9.56836H2.63379C2.15527 9.56836 1.84082 9.89648 1.84082 10.3613C1.84082 10.7373 2.09375 10.9902 2.4834 10.9902ZM6.09277 9.56836L6.75586 6.28711H9.74316L9.08008 9.56836H6.09277Z"></path></svg></span>기여도</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesMultipleSelect"><path d="M1.91602 4.83789C2.44238 4.83789 2.87305 4.40723 2.87305 3.87402C2.87305 3.34766 2.44238 2.91699 1.91602 2.91699C1.38281 2.91699 0.952148 3.34766 0.952148 3.87402C0.952148 4.40723 1.38281 4.83789 1.91602 4.83789ZM5.1084 4.52344H14.3984C14.7607 4.52344 15.0479 4.23633 15.0479 3.87402C15.0479 3.51172 14.7607 3.22461 14.3984 3.22461H5.1084C4.74609 3.22461 4.45898 3.51172 4.45898 3.87402C4.45898 4.23633 4.74609 4.52344 5.1084 4.52344ZM1.91602 9.03516C2.44238 9.03516 2.87305 8.60449 2.87305 8.07129C2.87305 7.54492 2.44238 7.11426 1.91602 7.11426C1.38281 7.11426 0.952148 7.54492 0.952148 8.07129C0.952148 8.60449 1.38281 9.03516 1.91602 9.03516ZM5.1084 8.7207H14.3984C14.7607 8.7207 15.0479 8.43359 15.0479 8.07129C15.0479 7.70898 14.7607 7.42188 14.3984 7.42188H5.1084C4.74609 7.42188 4.45898 7.70898 4.45898 8.07129C4.45898 8.43359 4.74609 8.7207 5.1084 8.7207ZM1.91602 13.2324C2.44238 13.2324 2.87305 12.8018 2.87305 12.2686C2.87305 11.7422 2.44238 11.3115 1.91602 11.3115C1.38281 11.3115 0.952148 11.7422 0.952148 12.2686C0.952148 12.8018 1.38281 13.2324 1.91602 13.2324ZM5.1084 12.918H14.3984C14.7607 12.918 15.0479 12.6309 15.0479 12.2686C15.0479 11.9062 14.7607 11.6191 14.3984 11.6191H5.1084C4.74609 11.6191 4.45898 11.9062 4.45898 12.2686C4.45898 12.6309 4.74609 12.918 5.1084 12.918Z"></path></svg></span>세부사항</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesMultipleSelect"><path d="M1.91602 4.83789C2.44238 4.83789 2.87305 4.40723 2.87305 3.87402C2.87305 3.34766 2.44238 2.91699 1.91602 2.91699C1.38281 2.91699 0.952148 3.34766 0.952148 3.87402C0.952148 4.40723 1.38281 4.83789 1.91602 4.83789ZM5.1084 4.52344H14.3984C14.7607 4.52344 15.0479 4.23633 15.0479 3.87402C15.0479 3.51172 14.7607 3.22461 14.3984 3.22461H5.1084C4.74609 3.22461 4.45898 3.51172 4.45898 3.87402C4.45898 4.23633 4.74609 4.52344 5.1084 4.52344ZM1.91602 9.03516C2.44238 9.03516 2.87305 8.60449 2.87305 8.07129C2.87305 7.54492 2.44238 7.11426 1.91602 7.11426C1.38281 7.11426 0.952148 7.54492 0.952148 8.07129C0.952148 8.60449 1.38281 9.03516 1.91602 9.03516ZM5.1084 8.7207H14.3984C14.7607 8.7207 15.0479 8.43359 15.0479 8.07129C15.0479 7.70898 14.7607 7.42188 14.3984 7.42188H5.1084C4.74609 7.42188 4.45898 7.70898 4.45898 8.07129C4.45898 8.43359 4.74609 8.7207 5.1084 8.7207ZM1.91602 13.2324C2.44238 13.2324 2.87305 12.8018 2.87305 12.2686C2.87305 11.7422 2.44238 11.3115 1.91602 11.3115C1.38281 11.3115 0.952148 11.7422 0.952148 12.2686C0.952148 12.8018 1.38281 13.2324 1.91602 13.2324ZM5.1084 12.918H14.3984C14.7607 12.918 15.0479 12.6309 15.0479 12.2686C15.0479 11.9062 14.7607 11.6191 14.3984 11.6191H5.1084C4.74609 11.6191 4.45898 11.9062 4.45898 12.2686C4.45898 12.6309 4.74609 12.918 5.1084 12.918Z"></path></svg></span>요약</th><th><span class="icon property-icon"><svg role="graphics-symbol" viewBox="0 0 16 16" style="width:14px;height:14px;display:block;fill:rgba(55, 53, 47, 0.45);flex-shrink:0" class="typesDate"><path d="M3.29688 14.4561H12.7031C14.1797 14.4561 14.9453 13.6904 14.9453 12.2344V3.91504C14.9453 2.45215 14.1797 1.69336 12.7031 1.69336H3.29688C1.82031 1.69336 1.05469 2.45215 1.05469 3.91504V12.2344C1.05469 13.6973 1.82031 14.4561 3.29688 14.4561ZM3.27637 13.1162C2.70898 13.1162 2.39453 12.8154 2.39453 12.2207V5.9043C2.39453 5.30273 2.70898 5.00879 3.27637 5.00879H12.71C13.2842 5.00879 13.6055 5.30273 13.6055 5.9043V12.2207C13.6055 12.8154 13.2842 13.1162 12.71 13.1162H3.27637ZM6.68066 7.38086H7.08398C7.33008 7.38086 7.41211 7.30566 7.41211 7.05957V6.66309C7.41211 6.41699 7.33008 6.3418 7.08398 6.3418H6.68066C6.44141 6.3418 6.35938 6.41699 6.35938 6.66309V7.05957C6.35938 7.30566 6.44141 7.38086 6.68066 7.38086ZM8.92285 7.38086H9.31934C9.56543 7.38086 9.64746 7.30566 9.64746 7.05957V6.66309C9.64746 6.41699 9.56543 6.3418 9.31934 6.3418H8.92285C8.67676 6.3418 8.59473 6.41699 8.59473 6.66309V7.05957C8.59473 7.30566 8.67676 7.38086 8.92285 7.38086ZM11.1582 7.38086H11.5547C11.8008 7.38086 11.8828 7.30566 11.8828 7.05957V6.66309C11.8828 6.41699 11.8008 6.3418 11.5547 6.3418H11.1582C10.9121 6.3418 10.8301 6.41699 10.8301 6.66309V7.05957C10.8301 7.30566 10.9121 7.38086 11.1582 7.38086ZM4.44531 9.58203H4.84863C5.09473 9.58203 5.17676 9.50684 5.17676 9.26074V8.86426C5.17676 8.61816 5.09473 8.54297 4.84863 8.54297H4.44531C4.20605 8.54297 4.12402 8.61816 4.12402 8.86426V9.26074C4.12402 9.50684 4.20605 9.58203 4.44531 9.58203ZM6.68066 9.58203H7.08398C7.33008 9.58203 7.41211 9.50684 7.41211 9.26074V8.86426C7.41211 8.61816 7.33008 8.54297 7.08398 8.54297H6.68066C6.44141 8.54297 6.35938 8.61816 6.35938 8.86426V9.26074C6.35938 9.50684 6.44141 9.58203 6.68066 9.58203ZM8.92285 9.58203H9.31934C9.56543 9.58203 9.64746 9.50684 9.64746 9.26074V8.86426C9.64746 8.61816 9.56543 8.54297 9.31934 8.54297H8.92285C8.67676 8.54297 8.59473 8.61816 8.59473 8.86426V9.26074C8.59473 9.50684 8.67676 9.58203 8.92285 9.58203ZM11.1582 9.58203H11.5547C11.8008 9.58203 11.8828 9.50684 11.8828 9.26074V8.86426C11.8828 8.61816 11.8008 8.54297 11.5547 8.54297H11.1582C10.9121 8.54297 10.8301 8.61816 10.8301 8.86426V9.26074C10.8301 9.50684 10.9121 9.58203 11.1582 9.58203ZM4.44531 11.7832H4.84863C5.09473 11.7832 5.17676 11.708 5.17676 11.4619V11.0654C5.17676 10.8193 5.09473 10.7441 4.84863 10.7441H4.44531C4.20605 10.7441 4.12402 10.8193 4.12402 11.0654V11.4619C4.12402 11.708 4.20605 11.7832 4.44531 11.7832ZM6.68066 11.7832H7.08398C7.33008 11.7832 7.41211 11.708 7.41211 11.4619V11.0654C7.41211 10.8193 7.33008 10.7441 7.08398 10.7441H6.68066C6.44141 10.7441 6.35938 10.8193 6.35938 11.0654V11.4619C6.35938 11.708 6.44141 11.7832 6.68066 11.7832ZM8.92285 11.7832H9.31934C9.56543 11.7832 9.64746 11.708 9.64746 11.4619V11.0654C9.64746 10.8193 9.56543 10.7441 9.31934 10.7441H8.92285C8.67676 10.7441 8.59473 10.8193 8.59473 11.0654V11.4619C8.59473 11.708 8.67676 11.7832 8.92285 11.7832Z"></path></svg></span>작업기간</th></tr></thead><tbody><tr id="e0c516c3-0ca0-4f02-80df-259606b4252c"><td class="cell-title"><a href="%E1%84%92%E1%85%A9%E1%86%BC%E1%84%89%E1%85%A1%E1%86%BC%E1%84%80%E1%85%B5%20%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%204c607feb548c4d1f8670ad1c6f046ec7/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%201da4b933465047569c85f13f7963e4e7/HYUNDAI%20AR%20ATS%20e0c516c30ca04f0280df259606b4252c.html"><span class="icon">🚙</span>HYUNDAI AR ATS</a></td><td class="cell-ITpB"><a href="-" class="url-value">-</a></td><td class="cell-o}`:">30%</td><td class="cell-BhNW"><span class="selected-value select-value-color-blue">유니티</span></td><td class="cell-BTao"><span class="selected-value select-value-color-pink">VRMedia</span><span class="selected-value select-value-color-gray">홀로렌즈</span></td><td class="cell-`Bst"><time>@2023년 12월 18일 → 2024년 1월 26일</time></td></tr><tr id="ff2c7667-f746-47a6-83cb-80f9a8c640e8"><td class="cell-title"><a href="%E1%84%92%E1%85%A9%E1%86%BC%E1%84%89%E1%85%A1%E1%86%BC%E1%84%80%E1%85%B5%20%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%204c607feb548c4d1f8670ad1c6f046ec7/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%201da4b933465047569c85f13f7963e4e7/Diaspora(%E1%84%83%E1%85%B5%E1%84%8B%E1%85%A1%E1%84%89%E1%85%B3%E1%84%91%E1%85%A9%E1%84%85%E1%85%A1)%20ff2c7667f74647a683cb80f9a8c640e8.html"><span class="icon">🎮</span>Diaspora(디아스포라)</a></td><td class="cell-ITpB"><a href="https://store.steampowered.com/app/1821970/Diaspora/" class="url-value">https://store.steampowered.com/app/1821970/Diaspora/</a></td><td class="cell-o}`:">75%</td><td class="cell-BhNW"><span class="selected-value select-value-color-red">Steam</span><span class="selected-value select-value-color-blue">유니티</span></td><td class="cell-BTao"><span class="selected-value select-value-color-pink">Acts29Games</span><span class="selected-value select-value-color-default">PC게임</span></td><td class="cell-`Bst"><time>@2022년 8월 29일 → 2023년 12월 15일</time></td></tr><tr id="608317f2-53d6-4b35-b33e-2ee5787cf6a5"><td class="cell-title"><a href="%E1%84%92%E1%85%A9%E1%86%BC%E1%84%89%E1%85%A1%E1%86%BC%E1%84%80%E1%85%B5%20%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%204c607feb548c4d1f8670ad1c6f046ec7/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%201da4b933465047569c85f13f7963e4e7/Dice%20Master%20608317f253d64b35b33e2ee5787cf6a5.html"><span class="icon">📱</span>Dice Master</a></td><td class="cell-ITpB"><a href="https://play.google.com/store/apps/details?id=com.Kanariasoft.DiceMaster" class="url-value">https://play.google.com/store/apps/details?id=com.Kanariasoft.DiceMaster</a></td><td class="cell-o}`:">45%</td><td class="cell-BhNW"><span class="selected-value select-value-color-gray">안드로이드</span><span class="selected-value select-value-color-blue">유니티</span></td><td class="cell-BTao"><span class="selected-value select-value-color-green">모바일게임</span><span class="selected-value select-value-color-blue">팀 프로젝트</span></td><td class="cell-`Bst"><time>@2023년 8월 15일 → 2023년 12월 26일</time></td></tr><tr id="d62962dd-c7c9-4e76-97cb-14dd043d6a19"><td class="cell-title"><a href="%E1%84%92%E1%85%A9%E1%86%BC%E1%84%89%E1%85%A1%E1%86%BC%E1%84%80%E1%85%B5%20%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%204c607feb548c4d1f8670ad1c6f046ec7/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%201da4b933465047569c85f13f7963e4e7/Cleverest%20Knight(%E1%84%89%E1%85%B3%E1%86%AF%E1%84%80%E1%85%B5%E1%84%85%E1%85%A9%E1%84%8B%E1%85%AE%E1%86%AB%20%E1%84%80%E1%85%B5%E1%84%89%E1%85%A1%20%E1%84%89%E1%85%A2%E1%86%BC%E1%84%92%E1%85%AA%E1%86%AF)%20d62962ddc7c94e7697cb14dd043d6a19.html"><span class="icon">📱</span>Cleverest Knight(슬기로운 기사 생활)</a></td><td class="cell-ITpB"><a href="https://play.google.com/store/apps/details?id=com.CatacombGames.CleverestKnight" class="url-value">https://play.google.com/store/apps/details?id=com.CatacombGames.CleverestKnight</a></td><td class="cell-o}`:">100%</td><td class="cell-BhNW"><span class="selected-value select-value-color-gray">안드로이드</span><span class="selected-value select-value-color-blue">유니티</span></td><td class="cell-BTao"><span class="selected-value select-value-color-orange">개인 프로젝트</span><span class="selected-value select-value-color-green">모바일게임</span></td><td class="cell-`Bst"><time>@2022년 8월 30일 → 2023년 4월 24일</time></td></tr><tr id="b15e2115-8ad6-45e7-a078-35d12ee5b2b4"><td class="cell-title"><a href="%E1%84%92%E1%85%A9%E1%86%BC%E1%84%89%E1%85%A1%E1%86%BC%E1%84%80%E1%85%B5%20%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%204c607feb548c4d1f8670ad1c6f046ec7/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%201da4b933465047569c85f13f7963e4e7/Portfolio%20Project%20(%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%20%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3)%20b15e21158ad645e7a07835d12ee5b2b4.html"><span class="icon">🎮</span>Portfolio Project                                                 (포트폴리오 프로젝트)</a></td><td class="cell-ITpB"><a href="https://youtu.be/RTpPyCCJJXY" class="url-value">https://youtu.be/RTpPyCCJJXY</a></td><td class="cell-o}`:">100%</td><td class="cell-BhNW"><span class="selected-value select-value-color-blue">유니티</span></td><td class="cell-BTao"><span class="selected-value select-value-color-default">PC게임</span><span class="selected-value select-value-color-orange">개인 프로젝트</span></td><td class="cell-`Bst"><time>@2022년 2월 14일 → 2022년 7월 21일</time></td></tr><tr id="3ecff3ce-86c9-41f6-be30-f362abf0646c"><td class="cell-title"><a href="%E1%84%92%E1%85%A9%E1%86%BC%E1%84%89%E1%85%A1%E1%86%BC%E1%84%80%E1%85%B5%20%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%204c607feb548c4d1f8670ad1c6f046ec7/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%201da4b933465047569c85f13f7963e4e7/Taxi%20Mad%20Rush(%E1%84%90%E1%85%A2%E1%86%A8%E1%84%89%E1%85%B5%20%E1%84%86%E1%85%A2%E1%84%83%E1%85%B3%20%E1%84%85%E1%85%A5%E1%84%89%E1%85%B1)%203ecff3ce86c941f6be30f362abf0646c.html"><span class="icon">📱</span>Taxi Mad Rush(택시 매드 러쉬)</a></td><td class="cell-ITpB"><a href="-" class="url-value">-</a></td><td class="cell-o}`:">100%</td><td class="cell-BhNW"><span class="selected-value select-value-color-gray">안드로이드</span><span class="selected-value select-value-color-blue">유니티</span></td><td class="cell-BTao"><span class="selected-value select-value-color-orange">개인 프로젝트</span><span class="selected-value select-value-color-green">모바일게임</span></td><td class="cell-`Bst"><time>@2019년 12월 10일 → 2020년 3월 16일</time></td></tr><tr id="6d72f195-5b73-49cd-8a4b-47f4e04d9bd3"><td class="cell-title"><a href="%E1%84%92%E1%85%A9%E1%86%BC%E1%84%89%E1%85%A1%E1%86%BC%E1%84%80%E1%85%B5%20%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%204c607feb548c4d1f8670ad1c6f046ec7/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%201da4b933465047569c85f13f7963e4e7/From%20Today%20Blacksmith%20(%E1%84%8B%E1%85%A9%E1%84%82%E1%85%B3%E1%86%AF%E1%84%87%E1%85%AE%E1%84%90%E1%85%A5%20%E1%84%83%E1%85%A2%E1%84%8C%E1%85%A1%E1%86%BC%E1%84%8C%E1%85%A1%E1%86%BC%E1%84%8B%E1%85%B5)%206d72f1955b7349cd8a4b47f4e04d9bd3.html"><span class="icon">📱</span>From Today Blacksmith                                     (오늘부터 대장장이)</a></td><td class="cell-ITpB"><a href="https://play.google.com/store/apps/details?id=com.CatacombGames.BlacksmithFromNow" class="url-value">https://play.google.com/store/apps/details?id=com.CatacombGames.BlacksmithFromNow</a></td><td class="cell-o}`:">100%</td><td class="cell-BhNW"><span class="selected-value select-value-color-gray">안드로이드</span><span class="selected-value select-value-color-blue">유니티</span></td><td class="cell-BTao"><span class="selected-value select-value-color-orange">개인 프로젝트</span><span class="selected-value select-value-color-green">모바일게임</span></td><td class="cell-`Bst"><time>@2019년 3월 4일 → 2019년 9월 27일</time></td></tr><tr id="5d7de185-26e5-4034-a5e2-537d7ec753b0"><td class="cell-title"><a href="%E1%84%92%E1%85%A9%E1%86%BC%E1%84%89%E1%85%A1%E1%86%BC%E1%84%80%E1%85%B5%20%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%204c607feb548c4d1f8670ad1c6f046ec7/%E1%84%91%E1%85%B3%E1%84%85%E1%85%A9%E1%84%8C%E1%85%A6%E1%86%A8%E1%84%90%E1%85%B3%201da4b933465047569c85f13f7963e4e7/Brave%20Flight(%E1%84%8B%E1%85%AD%E1%86%BC%E1%84%80%E1%85%A1%E1%86%B7%E1%84%92%E1%85%A1%E1%86%AB%20%E1%84%87%E1%85%B5%E1%84%92%E1%85%A2%E1%86%BC)%205d7de18526e54034a5e2537d7ec753b0.html"><span class="icon">📱</span>Brave Flight(용감한 비행)</a></td><td class="cell-ITpB"><a href="https://youtu.be/NOm_xetACEI" class="url-value">https://youtu.be/NOm_xetACEI</a></td><td class="cell-o}`:">100%</td><td class="cell-BhNW"><span class="selected-value select-value-color-gray">안드로이드</span><span class="selected-value select-value-color-blue">유니티</span></td><td class="cell-BTao"><span class="selected-value select-value-color-orange">개인 프로젝트</span><span class="selected-value select-value-color-green">모바일게임</span></td><td class="cell-`Bst"><time>@2018년 12월 3일 → 2019년 6월 20일</time></td></tr></tbody></table><br/><br/></div><p id="e9c7bead-7b40-4d08-892e-43c70b28008e" class="">
+</p><h1 id="ff61ab0f-1f64-43d5-a7e1-147adc6fd6ee" class="block-color-blue"><style>@import url('https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.9/katex.min.css')</style><span data-token-index="0" contenteditable="false" class="notion-text-equation-token" style="user-select:all;-webkit-user-select:all;-moz-user-select:all"><span></span><span><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mstyle mathcolor="#009900"><mrow><mi>S</mi><mi>k</mi><mi>i</mi><mi>l</mi><mi>l</mi><mi>s</mi></mrow></mstyle></mrow><annotation encoding="application/x-tex">\color{009900}{Skills}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord" style="color:#009900;"><span class="mord mathnormal" style="margin-right:0.05764em;color:#009900;">S</span><span class="mord mathnormal" style="color:#009900;">ki</span><span class="mord mathnormal" style="margin-right:0.01968em;color:#009900;">ll</span><span class="mord mathnormal" style="color:#009900;">s</span></span></span></span></span></span><span>﻿</span></span></h1><hr id="8f911202-059d-4b5f-934a-62543f44d3fc"/><h3 id="78d9f012-f393-4f3d-8cff-9e8f46c70fca" class="block-color-purple"><strong>Programming language</strong></h3><div id="33e8aefe-7777-476a-9654-cfce3726298a" class="column-list"><div id="c9e2aa20-e36d-45f9-8023-b9f71e4a6d1a" style="width:200.00000000000009%" class="column"><figure class="block-color-gray callout" style="white-space:pre-wrap;display:flex" id="abe0b4cc-255e-43eb-a93b-d81c37dfacb9"><div style="font-size:1.5em"><img class="icon" src="%E1%84%92%E1%85%A9%E1%86%BC%E1%84%89%E1%85%A1%E1%86%BC%E1%84%80%E1%85%B5%20%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%204c607feb548c4d1f8670ad1c6f046ec7/c-sharp-c-icon-1822x2048-wuf3ijab.png"/></div><div style="width:100%">C#                                 🟪🟪🟪🟪🟪</div></figure><figure class="block-color-gray callout" style="white-space:pre-wrap;display:flex" id="f68d450f-4518-48b8-9e40-6c39c299781b"><div style="font-size:1.5em"><img class="icon" src="%E1%84%92%E1%85%A9%E1%86%BC%E1%84%89%E1%85%A1%E1%86%BC%E1%84%80%E1%85%B5%20%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%204c607feb548c4d1f8670ad1c6f046ec7/images.png"/></div><div style="width:100%">C                                   <mark class="highlight-purple">🟪🟪</mark>⬜⬜⬜</div></figure><p id="79b11aea-d7cc-41aa-a67f-11d1faf97c3a" class="">
+</p></div><div id="f016228e-16ed-4ee5-92f0-e7f88948adf4" style="width:100.00000000000003%" class="column"><figure class="block-color-gray callout" style="white-space:pre-wrap;display:flex" id="614b846c-3bec-4b97-8974-b8e810bf0cf1"><div style="font-size:1.5em"><img class="icon" src="%E1%84%92%E1%85%A9%E1%86%BC%E1%84%89%E1%85%A1%E1%86%BC%E1%84%80%E1%85%B5%20%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%204c607feb548c4d1f8670ad1c6f046ec7/6132222.png"/></div><div style="width:100%">C++                             🟪🟪⬜⬜⬜</div></figure><figure class="block-color-gray callout" style="white-space:pre-wrap;display:flex" id="1d0758e6-16ed-4c98-918e-52898d052eb2"><div style="font-size:1.5em"><img class="icon" src="%E1%84%92%E1%85%A9%E1%86%BC%E1%84%89%E1%85%A1%E1%86%BC%E1%84%80%E1%85%B5%20%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%204c607feb548c4d1f8670ad1c6f046ec7/2746FF3B53E74F2612.png"/></div><div style="width:100%">JavaScript                    🟪🟪⬜⬜⬜</div></figure><p id="94f0e28c-2b63-4055-9a58-c4b6adfa7e51" class="">
+</p></div></div><h3 id="3e08a26a-9dee-4139-927e-dadb585c755f" class="block-color-purple">Game Engine</h3><div id="8279df47-0754-46e9-9879-d62015081665" class="column-list"><div id="43acbc70-2712-42d0-b02b-236561a1da65" style="width:50%" class="column"><figure class="block-color-gray callout" style="white-space:pre-wrap;display:flex" id="e0a1761b-22a7-4404-a9f9-a8d5154a1bfb"><div style="font-size:1.5em"><img class="icon" src="https://cdn.icon-icons.com/icons2/2248/PNG/512/unity_icon_136074.png"/></div><div style="width:100%">Unity                             🟪🟪🟪🟪🟪</div></figure></div><div id="f04eba00-a8c9-4861-8c47-0de83a999585" style="width:50%" class="column"><figure class="block-color-gray callout" style="white-space:pre-wrap;display:flex" id="55dc761f-c6f0-4a93-9896-41abf2faa4c7"><div style="font-size:1.5em"><img class="icon" src="%E1%84%92%E1%85%A9%E1%86%BC%E1%84%89%E1%85%A1%E1%86%BC%E1%84%80%E1%85%B5%20%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%204c607feb548c4d1f8670ad1c6f046ec7/%25EB%258B%25A4%25EC%259A%25B4%25EB%25A1%259C%25EB%2593%259C.png"/></div><div style="width:100%">Unreal                           🟪🟪⬜⬜⬜</div></figure></div></div><div id="dfc5408a-fcd6-4b2a-8a30-9525946ae741" class="column-list"><figure class="block-color-gray callout" style="white-space:pre-wrap;display:flex" id="ec74ef53-c0ed-4a5b-b134-b0fa0189f9de"><div style="font-size:1.5em"><img class="icon" src="https://cdn.icon-icons.com/icons2/2248/PNG/512/unity_icon_136074.png"/></div><div style="width:100%">Unity                             🟪🟪🟪🟪🟪</div></figure><figure class="block-color-gray callout" style="white-space:pre-wrap;display:flex" id="6fa24d52-e236-4e07-9474-2dc17cc78373"><div style="font-size:1.5em"><img class="icon" src="%E1%84%92%E1%85%A9%E1%86%BC%E1%84%89%E1%85%A1%E1%86%BC%E1%84%80%E1%85%B5%20%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%204c607feb548c4d1f8670ad1c6f046ec7/%25EB%258B%25A4%25EC%259A%25B4%25EB%25A1%259C%25EB%2593%259C%201.png"/></div><div style="width:100%">Unreal                         🟪🟪⬜️⬜️⬜️</div></figure></div><div id="76fa8a5c-a807-4d35-8a1a-bd7daf1c4663" class="column-list"><div id="163c765d-fecd-48f2-a282-3bac6c01f768" style="width:100%" class="column"><figure class="block-color-gray callout" style="white-space:pre-wrap;display:flex" id="116e6cec-b2c2-4268-b70f-cdfbd97164a8"><div style="font-size:1.5em"><img class="icon" src="%E1%84%92%E1%85%A9%E1%86%BC%E1%84%89%E1%85%A1%E1%86%BC%E1%84%80%E1%85%B5%20%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%204c607feb548c4d1f8670ad1c6f046ec7/1200px-Adobe_Photoshop_CC_icon.svg.png"/></div><div style="width:100%">Adobe Photoshop        🟪🟪🟪⬜⬜</div></figure><figure class="block-color-gray callout" style="white-space:pre-wrap;display:flex" id="7a981b92-01d6-46e5-bbe8-e8ec2458437e"><div style="font-size:1.5em"><img class="icon" src="%E1%84%92%E1%85%A9%E1%86%BC%E1%84%89%E1%85%A1%E1%86%BC%E1%84%80%E1%85%B5%20%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%204c607feb548c4d1f8670ad1c6f046ec7/%25EB%258B%25A4%25EC%259A%25B4%25EB%25A1%259C%25EB%2593%259C_(1).png"/></div><div style="width:100%">Blender                         🟪🟪⬜⬜⬜</div></figure></div><div id="fbb366d5-f9eb-4a81-bdd2-42081cd5c8e3" style="width:100%" class="column"><figure class="block-color-gray callout" style="white-space:pre-wrap;display:flex" id="4d7600c4-e0ef-47d0-8c17-cc862e0c98d2"><div style="font-size:1.5em"><img class="icon" src="%E1%84%92%E1%85%A9%E1%86%BC%E1%84%89%E1%85%A1%E1%86%BC%E1%84%80%E1%85%B5%20%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%204c607feb548c4d1f8670ad1c6f046ec7/741cb5ff6ea9b1daed3d1ba974fdfd0379de9d7624e30e1ea41078744d020adada37b6d5f76206c431c28850b74da8b96c7cc5a74f5106ab87f2c57aa2bfe51ff5a9d2b563e28a1ad80ab667edaf603523af515212fbb0d905ddc0db34d56c42.png"/></div><div style="width:100%">Adobe illustrator        🟪🟪⬜⬜⬜</div></figure><p id="1b9d63b1-27d4-4470-b40c-dda252d25131" class="">
+</p></div></div><h3 id="7038792a-f294-4d5b-a07f-18b150dc3a78" class="block-color-purple">Video Editing</h3><div id="0dea1ef1-b749-4e23-85c9-e54456831968" class="column-list"><div id="187671ff-0494-44b3-bb2f-5c05e8272322" style="width:100%" class="column"><figure class="block-color-gray callout" style="white-space:pre-wrap;display:flex" id="a1a5267a-4a75-40d8-8602-6e4d9ab95f2f"><div style="font-size:1.5em"><img class="icon" src="%E1%84%92%E1%85%A9%E1%86%BC%E1%84%89%E1%85%A1%E1%86%BC%E1%84%80%E1%85%B5%20%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%204c607feb548c4d1f8670ad1c6f046ec7/final_cut_pro_alt_macos_bigsur_icon_190176.png"/></div><div style="width:100%">Final Cut Pro X              🟪🟪🟪🟪⬜</div></figure></div><div id="0812288a-c416-49e4-b543-57ece4a18d0e" style="width:100%" class="column"><figure class="block-color-gray callout" style="white-space:pre-wrap;display:flex" id="7d3e92a1-ce35-4623-8c3b-7c862105d97e"><div style="font-size:1.5em"><img class="icon" src="%E1%84%92%E1%85%A9%E1%86%BC%E1%84%89%E1%85%A1%E1%86%BC%E1%84%80%E1%85%B5%20%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%204c607feb548c4d1f8670ad1c6f046ec7/%25EB%258B%25A4%25EC%259A%25B4%25EB%25A1%259C%25EB%2593%259C.jpg"/></div><div style="width:100%">Motion                       🟪🟪⬜⬜⬜</div></figure></div></div><h3 id="f2df583c-28e0-46d3-843c-fd8fff5af2bf" class="block-color-purple">OA</h3><div id="043ca755-0215-4c12-a566-2adc9f7a22e2" class="column-list"><div id="b1ad414c-e20e-420f-9f85-7cdf50fdb74f" style="width:199.99999999999997%" class="column"><figure class="block-color-gray callout" style="white-space:pre-wrap;display:flex" id="8e4ffc51-27c6-4c52-8bab-5490a44e901c"><div style="font-size:1.5em"><img class="icon" src="%E1%84%92%E1%85%A9%E1%86%BC%E1%84%89%E1%85%A1%E1%86%BC%E1%84%80%E1%85%B5%20%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%204c607feb548c4d1f8670ad1c6f046ec7/Microsoft-Word-Logo.png"/></div><div style="width:100%">Word                           🟪🟪🟪🟪⬜</div></figure><figure class="block-color-gray callout" style="white-space:pre-wrap;display:flex" id="7747302e-3ab7-4298-bf2a-4c6a552a1a88"><div style="font-size:1.5em"><img class="icon" src="%E1%84%92%E1%85%A9%E1%86%BC%E1%84%89%E1%85%A1%E1%86%BC%E1%84%80%E1%85%B5%20%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%204c607feb548c4d1f8670ad1c6f046ec7/Microsoft-PowerPoint-Logo.png"/></div><div style="width:100%">PowerPoint                  🟪🟪🟪🟪🟪</div></figure><p id="7105ecda-207f-40b4-a923-af094ca6edf1" class="">
+</p></div><div id="a8c77315-0bd6-49dd-b56b-403fc4e098bf" style="width:99.99999999999999%" class="column"><figure class="block-color-gray callout" style="white-space:pre-wrap;display:flex" id="744f2fe0-2088-4a07-852f-cef265229eec"><div style="font-size:1.5em"><img class="icon" src="%E1%84%92%E1%85%A9%E1%86%BC%E1%84%89%E1%85%A1%E1%86%BC%E1%84%80%E1%85%B5%20%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%204c607feb548c4d1f8670ad1c6f046ec7/microsoft-excel-new.jpg"/></div><div style="width:100%">Excel                            🟪🟪🟪🟪⬜</div></figure><p id="6e03076f-5198-46e9-995b-2876dd47984a" class="">
+</p></div></div><p id="67decc3f-af35-456a-b89e-f408f1ba3e6f" class="">
+</p><figure id="0daa7b9c-27a3-4b9c-9159-1bb4c8c664a4" class="image"><a href="%E1%84%92%E1%85%A9%E1%86%BC%E1%84%89%E1%85%A1%E1%86%BC%E1%84%80%E1%85%B5%20%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%204c607feb548c4d1f8670ad1c6f046ec7/footer.png"><img style="width:1872px" src="%E1%84%92%E1%85%A9%E1%86%BC%E1%84%89%E1%85%A1%E1%86%BC%E1%84%80%E1%85%B5%20%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%204c607feb548c4d1f8670ad1c6f046ec7/footer.png"/></a></figure><p id="05411ec1-f698-4f4d-83f0-3445e1ccf0d2" class=""><a href="%E1%84%92%E1%85%A9%E1%86%BC%E1%84%89%E1%85%A1%E1%86%BC%E1%84%80%E1%85%B5%20%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%204c607feb548c4d1f8670ad1c6f046ec7.html">🔝To the Top</a>   <a href="%E1%84%92%E1%85%A9%E1%86%BC%E1%84%89%E1%85%A1%E1%86%BC%E1%84%80%E1%85%B5%20%E1%84%91%E1%85%A9%E1%84%90%E1%85%B3%E1%84%91%E1%85%A9%E1%86%AF%E1%84%85%E1%85%B5%E1%84%8B%E1%85%A9%204c607feb548c4d1f8670ad1c6f046ec7.html">🟣 Contact</a>   <mark class="highlight-gray">©Sangki Hong 2024</mark></p><p id="58a31b15-0c10-44a0-b9fe-80c8abd19dfc" class="">
+</p><p id="ed564c69-05f3-43f4-8cca-d94705e86533" class="">
+</p><p id="da206211-fe8f-480f-801b-237bd899899e" class="">
+</p><p id="1d6ccf15-4411-472d-ab3c-6bb6950bab66" class="">
+</p><p id="70787844-9036-4f0c-a7e3-f148da28edf6" class="">
+</p></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>
